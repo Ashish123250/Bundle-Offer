@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Boxes</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Bundle & Save</h2>
+
+        <div class="box" onclick="selectBox(1, 195, '50% OFF')">
+            <input type="radio" name="bundle" id="one-pair">
+            <label for="one-pair">
+                <div class="info">
+                    <p>1 Pair</p>
+                    <p>DKK 195.00</p>
+                </div>
+                <span>50% OFF</span>
+            </label>
+        </div>
+
+        <div class="box" onclick="selectBox(2, 345, '40% OFF')">
+            <input type="radio" name="bundle" id="two-pair">
+            <label for="two-pair">
+                <div class="info">
+                    <p>2 Pair</p>
+                    <p>DKK 345.00</p>
+                </div>
+                <span>40% OFF</span>
+            </label>
+        </div>
+
+        <div class="box expanded" onclick="selectBox(3, 528, '60% OFF')">
+            <input type="radio" name="bundle" id="three-pair" checked>
+            <label for="three-pair">
+                <div class="info">
+                    <p>3 Pair</p>
+                    <p>DKK 528.00</p>
+                </div>
+                <span>60% OFF</span>
+            </label>
+            <div class="options">
+                <div class="option">
+                    <label>Size:</label>
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label>Color:</label>
+                    <select>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <p class="shipping">Free 2 Day Shipping</p>
+        <p class="total">Total: <span id="total-price">DKK 528.00</span></p>
+
+        <button class="add-to-cart">+ Add to Cart</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
